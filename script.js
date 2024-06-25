@@ -30,9 +30,9 @@ checkPalindromeBtn.addEventListener('click', () => {
   userInput.value = '';
 });
 
-userInput.addEventListener = ('keydown'), e => {
+userInput.addEventListener = ('keydown', e => {
   if (e.key === 'Enter') {
     checkForPalindrome(userInput.value);
     userInput.value = '';
   }
-};
+});
