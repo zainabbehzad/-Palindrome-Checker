@@ -1,28 +1,40 @@
-let input = document.querySelector(".input");
-let button = document.querySelector(".button");
-let p = document.querySelector(".text");
+const userInput = document.getElementById('text-input');
+const checkPalindromeBtn = document.getElementById('check-btn');
+const resultDiv = document.getElementById('result');
 
-button.addEventListener("click", checkPalindrome);
+const checkForPalindrome = input => {
+  const originalInput = input; // Store for later output
 
-function checkPalindrome(){
-    let filteredInput = input.value.replace(/[^a-z0-9]/ig,
-        "");
-    filteredInput = filteredInput.toLowerCase();
+  if (input === '') {
+    alert('Please input a value');
+    return;
+  }
 
-    let reverseInput = filteredInput.split("").reverse().
-    join("");
-    if(input.value == ""){
-        input.placeholder = "Please enter data";
-        return;
-    }
-    p.style.display = "block";
-    if(filteredInput == reverseInput){
-        p.innerHTML = `<span class="palindrome">"$
-        {filteredInput}"</span> is a Palindrome.`;
-    }
+  // Remove the previous result
+  resultDiv.replaceChildren();
 
-    else {
-        p.innerHTML = `<span class="palindrome">"$
-        {filteredInput}"</span> in not a Palindrome.`;
-    }
-}
+  const lowerCaseStr = input.replace(/[^A-Za-z0-9]/gi, '').toLowerCase();
+  let resultMsg = `<strong>${originalInput}</strong> ${
+    lowerCaseStr === [...lowerCaseStr].reverse().join('') ? 'is' : 'is not'
+  } a palindrome.`;
+
+  const pTag = document.createElement('p');
+  pTag.className = 'user-input';
+  pTag.innerHTML = resultMsg;
+  resultDiv.appendChild(pTag);
+
+  // Show the result.
+  resultDiv.classList.remove('hidden');
+};
+
+checkPalindromeBtn.addEventListener('click', () => {
+  checkForPalindrome(userInput.value);
+  userInput.value = '';
+});
+
+userInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    checkForPalindrome(userInput.value);
+    userInput.value = '';
+  }
+});
