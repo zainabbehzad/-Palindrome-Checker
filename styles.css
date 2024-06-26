@@ -1,5 +1,6 @@
 * {
-  margin-top: 30px;
+  margin-top: 35px;
+  margin-bottom: 35px;
   font-size: 1.1em;
   font-weight: 900;
 }
@@ -12,28 +13,26 @@ body {
 
 .container,
 .explanation {
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   border: 5px solid #ccc;
-  border-top-left-radius: 3em 7em;
-  border-top-right-radius: 4em 4em;
-  border-bottom-right-radius: 5em 5em;
-  border-bottom-left-radius: 5em 5em;
+  border-radius: 7em 7em / 7em 7em;
   color: pink;
   padding: 15px;
-  margin: 20px;
+  margin: auto;
   box-shadow: 10px 10px;
+  width: 600px;
+  height: 200px;
 }
 
-button {
-  background-color: pink;
+#check-btnS {
+  background-color: rgb(69, 19, 28);
   border: none;
   color: white;
-  padding: 7px 32px;
-  border-top-left-radius: 3em 7em;
-  border-top-right-radius: 4em 4em;
-  border-bottom-right-radius: 4em 4em;
-  border-bottom-left-radius: 4em 4em;
+  padding: 9px 32px;
+  border-radius: 3em 3em / 4em 4em;
 }
 
 h2 {
@@ -43,4 +42,67 @@ h2 {
 
 .paragraph-2 {
   padding: 20px;
+}
+
+@media (max-width: 767px) {
+  .container,
+  .explanation {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+  }
+
+  #check-btnS {
+    padding: 7px 24px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .paragraph-2 {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container,
+  .explanation {
+    width: 80%;
+    height: auto;
+    padding: 12px;
+  }
+
+  #check-btnS {
+    padding: 8px 28px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .paragraph-2 {
+    padding: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container,
+  .explanation {
+    width: 600px;
+    height: 200px;
+    padding: 15px;
+  }
+
+  #check-btnS {
+    padding: 9px 32px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .paragraph-2 {
+    padding: 20px;
+  }
 }
