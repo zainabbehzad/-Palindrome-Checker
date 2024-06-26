@@ -5,8 +5,8 @@
 🌟 👩‍💻A palindrome is a word, phrase, number, or other sequence of characters that reads the same backward as forward, such as "racecar" or "A man, a plan, a canal: Panama." A palindrome checker is a program or algorithm designed to determine whether a given input is a palindrome or not.💻📝🚀
 
 ## Demo 📸
-![Screenshot (16)](https://github.com/zainabbehzad/Product-Landing-Page/assets/168668702/68c26314-52d8-452a-81bc-c98a01470512)
-[Live Demo](https://zainabbehzad.github.io/Product-Landing-Page/)
+![Screenshot (29)](https://github.com/zainabbehzad/-Palindrome-Checker/assets/168668702/59e785e6-0e56-48e8-bce6-5e946a4bb7ea)
+
 
 ## -Palindrome-Checker 🛠️
 - HTML
