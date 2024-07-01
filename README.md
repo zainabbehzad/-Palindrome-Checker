@@ -6,6 +6,7 @@
 
 ## Demo 📸
 ![Screenshot (33)](https://github.com/zainabbehzad/-Palindrome-Checker/assets/168668702/e58af6fc-b669-4ea4-9c35-03b1ed0ea6f9)
+Live Link: [https://zainabbehzad.github.io/-Palindrome-Checker/]
 
 
 ## -Palindrome-Checker 🛠️
